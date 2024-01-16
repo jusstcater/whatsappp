@@ -1,4 +1,4 @@
-node
+ode
 {
 
 def mavenHome= tool name: 'maven3.6.2'
@@ -12,6 +12,8 @@ def mavenHome= tool name: 'maven3.6.2'
   echo "JOB Name ${env.JOB_NAME}"
  
  properties([[$class: 'JiraProjectProperty'], buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '2', daysToKeepStr: '', numToKeepStr: '2')), pipelineTriggers([pollSCM('* * * * *')])])
+
+ stages}
 
 stage('CheckoutCode')
 {
